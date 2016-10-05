@@ -37,7 +37,7 @@ function divdeBy2(decNumber){
     remStack.push(rem);
     decNumber=Math.floor(decNumber/2);
   }
-  while(!remStack.isEmpty){
+  while(!remStack.isEmpty()){
     binaryString +=remStack.pop().toString();
   }
   return binaryString;
@@ -57,7 +57,7 @@ function baseConverter(decNumber,base){
     remStack.push(rem);
     decNumber=Math.floor(decNumber/base);
   }
-  while(!remStack.isEmpty){
+  while(!remStack.isEmpty()){
     binaryString +=digits[remStack.pop()];
   }
   return baseString;
