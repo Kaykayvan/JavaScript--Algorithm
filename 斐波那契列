@@ -1,3 +1,4 @@
+//实现斐波那契列第n位的输出
 function fibonacci(n){
 if(typeof n == "number" && n>=1){
 if(n===1){
