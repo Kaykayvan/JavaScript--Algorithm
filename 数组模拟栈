@@ -58,7 +58,7 @@ function baseConverter(decNumber,base){
     decNumber=Math.floor(decNumber/base);
   }
   while(!remStack.isEmpty()){
-    binaryString +=digits[remStack.pop()];
+    baseString +=digits[remStack.pop()];
   }
   return baseString;
 }
