@@ -1,4 +1,3 @@
-//线性搜索(入门HelloWorld)
 //A为数组，x为要搜索的值
 function linearSearch(A, x) {
   for (var i = 0; i < A.length; i++) {
