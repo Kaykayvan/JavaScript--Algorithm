@@ -1,4 +1,4 @@
-/队列的创建
+//队列的创建
 function Queue(){
   var items=[];
   this.enqueue=function(e){
