@@ -1,4 +1,4 @@
-/栈的创建
+//栈的创建
 function Stack(){
   var items=[];
   this.push=function(e){
