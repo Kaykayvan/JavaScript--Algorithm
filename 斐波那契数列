@@ -1,44 +1,3 @@
-//实现斐波那契列第n位的输出
-function fibonacci(n){
-    if(typeof n == "number" && n>=1){
-        if(n===1){
-            return 0;
-        }else if(n===2){
-            return 1;
-        } else{
-            return fibonacci(n-1)+fibonacci(n-2);
-        }
-    }
-    else{
-        document.write("请输入不小于1的整数！\n")
-    }
-}
-document.write(fibonacci(?))
-
-
-//实现斐波那契列前n位的输出
-function fibonacci(n){
-    var fibona=[];
-    if(typeof n == "number" && n>=1){
-        fibona[0]=0;
-        fibona[1]=1;
-        for(var i=2;i<n;i++){
-            fibona[i]=fibona[i-1]+fibona[i-2];
-        }
-        return fibona;
-    }
-    else{
-        document.write("请输入不小于1的整数！")
-    }
-}
-document.write(fibonacci(?))
-
-
-
-
-
-
-
 /**Created by KayVan on 2016/10/7.
  * @desc：斐波那契列函数
  * @param：count（Number）
@@ -67,7 +26,6 @@ function getNthFibonacci(count) {
         return third;
     }
 }
-getNthFibonacci(4);//返回5
 
 
 //递归实现
@@ -87,4 +45,41 @@ function getNthFibonacci(count) {
     }
     return fibonacci(count);
 }
-getNthFibonacci(5);//返回8
+
+
+
+//fibonacci数列为：[0,1,1,2,3,5,8,13,21,34...]
+//实现斐波那契列第n位的输出
+function fibonacci(n){
+    if(typeof n == "number" && n>=1){
+        if(n===1){
+            return 0;
+        }else if(n===2){
+            return 1;
+        } else{
+            return fibonacci(n-1)+fibonacci(n-2);
+        }
+    }
+    else{
+       console.log("请输入不小于1的整数！");
+    }
+}
+fibonacci(4);//返回2
+
+//fibonacci数列为：[0,1,1,2,3,5,8,13,21,34...]
+//实现斐波那契列前n位的输出
+function fibonacci(n){
+    var fibona=[];
+    if(typeof n == "number" && n>=1){
+        fibona[0]=0;
+        fibona[1]=1;
+        for(var i=2;i<n;i++){
+            fibona[i]=fibona[i-1]+fibona[i-2];
+        }
+        return fibona;
+    }
+    else{
+        console.log("请输入不小于1的整数！");
+    }
+}
+fibonacci(5);//返回3
