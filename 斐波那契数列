@@ -32,3 +32,59 @@ function fibonacci(n){
     }
 }
 document.write(fibonacci(?))
+
+
+
+
+
+
+
+/**Created by KayVan on 2016/10/7.
+ * @desc：斐波那契列函数
+ * @param：count（Number）
+ * return: result{Number}第count个fibonacci值，计数从0开始。
+ * fibonacci数列为：[1,1,2,3,5,8,13,21,34...],
+ * 则getNthfibonacci(0)返回值为1，getNthfibonacci(4)返回值为5.
+ */
+
+//非递归实现
+function getNthFibonacci(count) {
+    //参数判断
+    var count = parseFloat(count );
+    if (isNaN(count) || count<0){
+        return 0;
+    }else if(count<=1){
+        return 1;
+    }else{
+        var first = 1,
+            second = 1,
+            third = 0;
+        for(var i=2;i<=count;i++){
+            third=first+second;
+            first=second;
+            second=third;
+        }
+        return third;
+    }
+}
+getNthFibonacci(4);//返回5
+
+
+//递归实现
+function getNthFibonacci(count) {
+    //参数判断
+    var count = parseFloat(count );
+    if (isNaN(count) || count<0){
+        return 0;
+    }
+    function fibonacci(count) {
+        if (count<=1){
+            return 1;
+        }
+        //callee是装逼用的，直接用return fibonacci(count-1)+fibonacci(count-2)也行
+        //return arguments.callee(count-1)+arguments.callee(count-2);
+        return fibonacci(count-1)+fibonacci(count-2);
+    }
+    return fibonacci(count);
+}
+getNthFibonacci(5);//返回8
